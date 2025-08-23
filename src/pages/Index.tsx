@@ -82,12 +82,14 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link to="/dashboard">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-glow hover-lift group">
-                  Start Tracking Now
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
+              <Button 
+                size="lg" 
+                className="bg-white text-primary hover:bg-white/90 shadow-glow hover-lift group"
+                onClick={() => window.location.href = '/auth'}
+              >
+                Start Tracking Now
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
               <Link to="/community">
                 <Button 
                   size="lg" 
@@ -180,12 +182,13 @@ const Index = () => {
               </div>
               
               <div className="mt-8">
-                <Link to="/activities">
-                  <Button className="hover-lift shadow-eco group">
-                    Start Logging Activities
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
+                <Button 
+                  className="hover-lift shadow-eco group"
+                  onClick={() => window.location.href = '/auth'}
+                >
+                  Start Logging Activities
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
               </div>
             </div>
             
@@ -254,13 +257,15 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link to="/dashboard">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-glow hover-lift group">
-                  <BarChart3 className="mr-2 h-5 w-5" />
-                  View Dashboard
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
+              <Button 
+                size="lg" 
+                className="bg-white text-primary hover:bg-white/90 shadow-glow hover-lift group"
+                onClick={() => window.location.href = '/auth'}
+              >
+                <BarChart3 className="mr-2 h-5 w-5" />
+                View Dashboard
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
               <Link to="/community">
                 <Button 
                   size="lg" 

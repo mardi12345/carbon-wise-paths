@@ -1,28 +1,47 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useAuth } from "@/contexts/AuthContext";
 import { 
   Leaf, 
   BarChart3, 
   Activity, 
   Users, 
   Menu,
-  Home
+  Home,
+  LogOut
 } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, signOut } = useAuth();
 
   const navItems = [
     { name: "Home", href: "/", icon: Home },
-    { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
-    { name: "Activities", href: "/activities", icon: Activity },
-    { name: "Community", href: "/community", icon: Users },
+    ...(user ? [
+      { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
+      { name: "Activities", href: "/activities", icon: Activity },
+      { name: "Community", href: "/community", icon: Users },
+    ] : [])
   ];
 
   const isActive = (href: string) => location.pathname === href;
+
+  const handleSignOut = async () => {
+    await signOut();
+    navigate("/");
+  };
+
+  const handleGetStarted = () => {
+    if (user) {
+      navigate("/dashboard");
+    } else {
+      navigate("/auth");
+    }
+  };
 
   return (
     <nav className="border-b border-border bg-card/50 backdrop-blur-md sticky top-0 z-50">
@@ -58,6 +77,26 @@ const Navigation = () => {
                 </Link>
               );
             })}
+            
+            {user ? (
+              <Button 
+                variant="ghost" 
+                size="icon"
+                onClick={handleSignOut}
+                title="Sign Out"
+                className="hover-lift"
+              >
+                <LogOut className="h-4 w-4" />
+              </Button>
+            ) : (
+              <Button 
+                variant="default" 
+                className="shadow-eco hover-lift"
+                onClick={handleGetStarted}
+              >
+                Get Started
+              </Button>
+            )}
           </div>
 
           {/* Mobile Navigation */}
@@ -100,6 +139,31 @@ const Navigation = () => {
                     </Link>
                   );
                 })}
+
+                {user ? (
+                  <Button 
+                    variant="ghost" 
+                    className="w-full justify-start space-x-2 hover-lift"
+                    onClick={() => {
+                      handleSignOut();
+                      setIsOpen(false);
+                    }}
+                  >
+                    <LogOut className="h-4 w-4" />
+                    <span>Sign Out</span>
+                  </Button>
+                ) : (
+                  <Button 
+                    variant="default" 
+                    className="w-full shadow-eco hover-lift"
+                    onClick={() => {
+                      handleGetStarted();
+                      setIsOpen(false);
+                    }}
+                  >
+                    Get Started
+                  </Button>
+                )}
               </div>
             </SheetContent>
           </Sheet>
