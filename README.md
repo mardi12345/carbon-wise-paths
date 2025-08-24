@@ -1,73 +1,107 @@
-# Welcome to your lovable project
+# 🌍 EcoTrack – Personal Carbon Footprint Tracker  
 
-## Project info
+## 📌 Project Title  
+EcoTrack – A Personal Carbon Footprint Tracker Web Application  
 
-**URL**: https://lovable.dev/projects/5ad676b5-adff-452f-9be4-c2e9cbf6f6bd
+---
 
-## How can I edit this code?
+## 📝 Description  
+EcoTrack adalah aplikasi web modern untuk membantu individu melacak, menganalisis, dan mengurangi **jejak karbon pribadi**.  
+Pengguna dapat mencatat aktivitas harian seperti transportasi, makanan, dan konsumsi energi, lalu sistem menghitung estimasi emisi CO2.  
 
-There are several ways of editing your application.
+Aplikasi ini dilengkapi dengan **dashboard interaktif**, **gamifikasi**, **leaderboard komunitas**, serta **rekomendasi personal** untuk gaya hidup lebih ramah lingkungan.  
 
-**Use lovable**
+---
 
-Simply visit the [lovable Project](https://lovable.dev/projects/5ad676b5-adff-452f-9be4-c2e9cbf6f6bd) and start prompting.
+## 🛠️ Technologies Used  
+- **Frontend Framework**: [Vite](https://vitejs.dev/) + [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)  
+- **UI Components**: [shadcn-ui](https://ui.shadcn.com/) + [Tailwind CSS](https://tailwindcss.com/)  
+- **Database & Auth**: [Supabase](https://supabase.com/) (PostgreSQL + Auth)  
+- **Visualization**: [Recharts](https://recharts.org/) / Chart.js  
+- **Deployment**: [Vercel](https://vercel.com/)  
 
-Changes made via lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🌟 Features  
+- **Authentication & Profil User** → Register/Login dengan Supabase Auth.  
+- **Dynamic Routing** → Halaman `/dashboard`, `/activities`, `/community`.  
+- **Activity Logging** → Input aktivitas transportasi, makanan, energi.  
+- **State Management** → Menggunakan React Context / Zustand / Redux.  
+- **Carbon Footprint Calculator** → API atau kalkulasi internal berbasis data emisi.  
+- **Dashboard Analytics** → Grafik mingguan & bulanan progres emisi.  
+- **Gamifikasi & Leaderboard** → Poin reward, badge, tantangan komunitas.  
+- **Community & Challenge** → Join challenge lingkungan, share progress ke sosial media.  
+- **Rekomendasi Personal** → Tips pengurangan emisi berbasis data user.  
+- **UI/UX Modern** → shadcn-ui + Tailwind, animasi ringan, tema hijau & biru.  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## ⚙️ Setup Instructions  
 
-Follow these steps:
+### 1. Clone Repository  
+```bash
+git clone https://github.com/yourusername/ecotrack.git
+cd ecotrack
+````
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 2. Install Dependencies
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 3. Environment Variables
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```
+VITE_SUPABASE_URL=https://jwexzhfzqbeppuobvqnk.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp3ZXh6aGZ6cWJlcHB1b2J2cW5rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU5Njg4NTgsImV4cCI6MjA3MTU0NDg1OH0.JZfzELig6U4ElDM-RGEYUOgSE-73OopnZRAwclTL2dw
+```
+
+> Dapatkan **Project URL** dan **Anon Key** dari dashboard Supabase.
+
+### 4. Run Development Server
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### 5. Build & Deploy to Vercel
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+* Push project ke GitHub.
+* Buka [Vercel Dashboard](https://vercel.com/dashboard).
+* Import project dari GitHub.
+* Tambahkan Environment Variables di **Project Settings > Environment Variables** (isi `VITE_SUPABASE_URL` dan `VITE_SUPABASE_ANON_KEY`).
+* Deploy → aplikasi siap online 🚀
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🤖 AI Support Explanation
 
-## What technologies are used for this project?
+Walaupun inti project berbasis database, **AI dapat mendukung fitur EcoTrack** dengan cara:
 
-This project is built with:
+* **Rekomendasi personal**: AI memberi tips berbasis aktivitas user (contoh: “Kurangi motor 2x/minggu → hemat 5 kg CO₂”).
+* **Pengkategorian otomatis**: Jika user menulis aktivitas bebas (“jalan kaki ke kampus 2 km”), AI bisa otomatis kategorikan ke *transportasi*.
+* **Future roadmap**: Chatbot ramah lingkungan yang menjawab pertanyaan seputar gaya hidup hijau.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 📸 Screenshots (Dummy Data Example)
 
-Simply open [lovable](https://lovable.dev/projects/5ad676b5-adff-452f-9be4-c2e9cbf6f6bd) and click on Share -> Publish.
+Tambahkan screenshot:
 
-## Can I connect a custom domain to my lovable project?
+* Dashboard user (grafik progress)
+![alt text](image.png)
+* Form input aktivitas
+![alt text](image-1.png)
+* Halaman komunitas & leaderboard
+![alt text](image-2.png)
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📄 License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+MIT License – bebas digunakan & dimodifikasi untuk keperluan belajar.
+
+```
+
+---
