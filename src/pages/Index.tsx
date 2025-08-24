@@ -185,7 +185,7 @@ const Index = () => {
               <div className="mt-8">
                 <Button 
                   className="hover-lift shadow-eco group"
-                  onClick={() => window.location.href = '/auth'}
+                  onClick={() => window.location.href = '/community'}
                 >
                   Start Logging Activities
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -261,7 +261,7 @@ const Index = () => {
               <Button 
                 size="lg" 
                 className="bg-white text-primary hover:bg-white/90 shadow-glow hover-lift group"
-                onClick={() => window.location.href = '/auth'}
+                onClick={() => window.location.href = '/community'}
               >
                 <BarChart3 className="mr-2 h-5 w-5" />
                 View Dashboard
