@@ -264,7 +264,7 @@ const Index = () => {
                 onClick={() => window.location.href = '/community'}
               >
                 <BarChart3 className="mr-2 h-5 w-5" />
-                View Dashboard
+                View Dashbor
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Link to="/community">
