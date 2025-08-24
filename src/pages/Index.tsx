@@ -86,6 +86,7 @@ const Index = () => {
               <Button 
                 size="lg" 
                 className="bg-white text-primary hover:bg-white/90 shadow-glow hover-lift group"
+                onClick={() => window.location.href = '/community'}
               >
                 Start Tracking Now
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
