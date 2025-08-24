@@ -103,5 +103,5 @@ Tambahkan screenshot:
 MIT License – bebas digunakan & dimodifikasi untuk keperluan belajar.
 
 ```
-
+Project ini sengaja gue buat untuk Capstone Project By Hacktive & IBM.
 ---
