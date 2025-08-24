@@ -82,7 +82,6 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link to="/community">
               <Button 
                 size="lg" 
                 className="bg-white text-primary hover:bg-white/90 shadow-glow hover-lift group"
